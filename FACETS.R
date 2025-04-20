@@ -3,13 +3,9 @@
 #install and call required packages
 
 install.packages(c("optparse", "remotes"))
-
 remotes::install_github("mskcc/facets")
 
---------------------------------
-  
-  library(optparse)
-
+library(optparse)
 library(facets)
 
 #######################################################################
@@ -28,11 +24,11 @@ for (file in pileup_files) {
   # Read SNP matrix
   rcmat <- readSnpMatrix(file)
   # Preprocess sample
-  preproc <- preProcSample(rcmat, gbuild="hg38", cval=150)
+  preproc <- preProcSample(rcmat, gbuild="hg38", cval=150) # cval setting used for normalisation
   # Process sample
   out <- procSample(preproc)
   # Fit model
-  fit <- emcncf(out, maxiter=20)
+  fit <- emcncf(out, maxiter=20)  # maxiter value used for normalisation
   # Save fit object
   saveRDS(fit, file = paste0("fit_", patient_id, ".rds"))
   # Save out object
