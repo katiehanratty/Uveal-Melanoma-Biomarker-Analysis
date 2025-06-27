@@ -3,7 +3,9 @@
 #RUNNING CNVKIT
 
 #download bedfile for the specific exome kit used from company website
-#set working directory to users bamfile directory
+
+#SET WORKING DIRECTORY TO USERS BAMFILE DIRECTORY
+
 #create access bedfile for use in command
 cnvkit.py access ~/alignment/reference/hg38.fa -o ~/CNVkit_analysis/bedfile/access.bed
 
