@@ -1,6 +1,9 @@
 #!/bin/sh
 
-#set working directory to users bamfile directory
+#VARIANT CALLING 
+
+#MANUALLY SET WORKING DIRECTORY TO USERS BAMFILE DIRECTORY
+
 #ensure to rename files to the sample name used in the BAM reads
 for i in *.bam; do
 mv i {i%_sorted_filtered_nodup_RG.bam}
