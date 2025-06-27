@@ -2,8 +2,10 @@
 
 #CREATE SNP PILEUP FILE FOR FACETS
 
-#download VCF file from FTP server 
-#set working directory to users bamfile directory
+#download VCF file from NCBI FTP server into directory of choiced (here ~/FACETS/VCF/00-common_all_chr.vcf.gz)
+
+#SET WORKING DIRECTORY TO USERS BAMFILE DIRECTORY
+
 for tumour in trimmed_*_tumour_sorted_filtered_nodup_RG.bam; do
 patient_id=${tumour#trimmed_}
 patient_id=${patient_id%_tumour_sorted_filtered_nodup_RG.bam}
